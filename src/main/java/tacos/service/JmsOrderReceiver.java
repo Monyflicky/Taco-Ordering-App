@@ -11,13 +11,14 @@ import tacos.model.TacoOrder;
 
 @Component
 public class JmsOrderReceiver implements OrderReceiver {
-    private final JmsTemplate jms;
-
     @Autowired
-    public JmsOrderReceiver(@Lazy JmsTemplate jms) {
-        this.jms = jms;
+    JmsTemplate jms;
 
-    }
+//    @Autowired
+//    public JmsOrderReceiver(@Lazy JmsTemplate jms) {
+//        this.jms = jms;
+//
+//    }
     @Override
     public TacoOrder receiveOrder() {
         return (TacoOrder) jms.receiveAndConvert("tacocloud.order.queue");
