@@ -1,0 +1,27 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${client_id}
+            client-secret: ${client-secret}
+        provider:
+          google:
+            redirectUri: http://localhost:8080/login/oauth2/code/google
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9000/oauth2/jwks
+
+
+
+logging:
+  file:
+    path: /var/logs/
+    file: TacoCloud.log
+  level:
+    root: WARN
+    org:
+      springframework:
+      security: DEBUG
+
