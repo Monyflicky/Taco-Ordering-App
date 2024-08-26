@@ -2,6 +2,7 @@ package tacos.web;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.apache.activemq.artemis.api.core.management.Attribute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 import org.springframework.web.client.RestTemplate;
+import reactor.core.publisher.Flux;
 import tacos.data.IngredientRepository;
 import tacos.model.Ingredient;
 import tacos.model.Taco;
@@ -42,7 +44,7 @@ public class DesignTacoController {
 	@ModelAttribute
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public void addIngredientsToModel(Model model) {
-				Iterable<Ingredient> ingredients = ingredientRepo.findAll();
+				Flux<Ingredient> ingredients = ingredientRepo.findAll();
 						
 				Type[] types = Ingredient.Type.values();
 				for(Type type : types) {
@@ -87,10 +89,15 @@ public class DesignTacoController {
 		return rest.getForObject("http://localhost:8080/ingredients/{id}",
 				Ingredient.class, ingredientId);
 	}
-	 private Iterable<Ingredient> filterByType(Iterable<Ingredient> ingredients, Type type) {
-		    return StreamSupport.stream(ingredients.spliterator(), false)
-		            .filter(x -> x.getType().equals(type))
-		            .collect(Collectors.toList());
+//	 private Iterable<Ingredient> filterByType(Flux<Ingredient> ingredients, Type type) {
+//		    return StreamSupport.stream(ingredients.spliterator(), false)
+//		            .filter(x -> x.getType().equals(type))
+//		            .collect(Collectors.toList());
+//	}
+	private Flux<Ingredient> filterByType(Flux<Ingredient> ingredients, Type type) {
+		return ingredients
+				.filter(ingredient -> ingredient.getType().equals(type));
 	}
+
 
 }

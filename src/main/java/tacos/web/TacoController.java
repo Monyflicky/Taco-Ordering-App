@@ -1,5 +1,6 @@
 package tacos.web;
 
+//import org.hibernate.query.QueryParameter;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.PageRequest;
@@ -8,6 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.reactive.function.server.RouterFunction;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import tacos.data.IngredientRepository;
 import tacos.data.TacoRepository;
 import tacos.data.UserRepository;
@@ -15,8 +21,14 @@ import tacos.model.Ingredient;
 import tacos.model.Taco;
 import tacos.model.TacoOrder;
 
+import java.net.URI;
 import java.util.Arrays;
 import java.util.Optional;
+
+import static javax.management.Query.and;
+import static org.springframework.web.reactive.function.server.RequestPredicates.*;
+import static org.springframework.web.reactive.function.server.RouterFunctions.route;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @RestController
 @RequestMapping(path="/api/tacos", produces="application/json")
@@ -28,22 +40,37 @@ public class TacoController {
         this.tacoRep = tacoRep;
     }
 
-    @GetMapping(params="recent")
-    public Iterable<Taco> getRecentTaco(){
+    //@GetMapping(params="recent")
+    public Mono<ServerResponse> recents(ServerRequest request){
        // PageRequest page = PageRequest.of(
                 //0, 12, Sort.by("createdAt").descending());
-        return tacoRep.findAll();
+        return ServerResponse.ok().body(tacoRep.findAll(), Taco.class);
+    }
+    @Bean
+    public RouterFunction<?> recentTaco(){
+        return route(GET("/api/tacos").
+                and(queryParam("recent", t->t != null )),
+                this::recents)
+                .andRoute(POST("/api/tacos"), this::postTaco);
+
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Taco> findTacoById(@PathVariable("id") long id){
-        Optional<Taco> tac=  tacoRep.findById(id);
-        return tac.map(taco -> new ResponseEntity<>(taco, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
+    public Mono<Taco> findTacoById(@PathVariable("id") long id){
+        return tacoRep.findById(id);
+        //return tac.map(taco -> new ResponseEntity<>(taco, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
     }
 
-    @PostMapping(consumes = "application/json")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Taco postTaco(@RequestBody Taco taco){
-         return tacoRep.save(taco);
+    //@PostMapping(consumes = "application/json")
+   // @ResponseStatus(HttpStatus.CREATED)
+    public Mono<ServerResponse> postTaco(ServerRequest request)
+    {
+        return request.bodyToMono(Taco.class)
+                .flatMap(taco -> tacoRep.save(taco))
+                .flatMap(savedTaco -> {
+                       return ServerResponse.
+                               created(URI.create("http://localhost:8080/api/tacos/" + savedTaco.getId()))
+                               .body(savedTaco, Taco.class);
+                });
     }
     @Bean
     public CommandLineRunner dataLoader(

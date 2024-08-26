@@ -1,8 +1,8 @@
 package tacos.web;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
 import tacos.data.OrderMessagingService;
 import tacos.data.OrderRepository;
 import tacos.model.TacoOrder;
@@ -25,7 +25,7 @@ public class OrderApiController
 
     @PostMapping(consumes="application/json")
     @ResponseStatus(HttpStatus.CREATED)
-    public TacoOrder postTacoOrder(@RequestBody TacoOrder order){
+    public Mono<TacoOrder> postTacoOrder(@RequestBody TacoOrder order){
 
         messageService.sendOrder(order);
         return repo.save(order);

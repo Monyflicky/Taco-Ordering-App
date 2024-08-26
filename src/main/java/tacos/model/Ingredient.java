@@ -5,7 +5,8 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
+//import org.hibernate.annotations.GenericGenerator;
+//import org.hibernate.annotations.GenericGenerator;
 //import org.hibernate.annotations.GenericGenerator;
 
 //import org.springframework.data.relational.core.mapping.Table;
@@ -24,12 +25,11 @@ public class Ingredient implements Serializable {
 
     @Id
     @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    //@GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(name = "Id", columnDefinition = "VARCHAR(100)")
-	public String id;
+    public String id;
     
     public String name;
-
 
     public Type type;
     

@@ -1,4 +1,4 @@
-package tacos.service;
+package tacos.service.jms;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package tacos.service;
+package tacos.service.jms;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +23,5 @@ public class JmsOrderReceiver implements OrderReceiver {
     public TacoOrder receiveOrder() {
         return (TacoOrder) jms.receiveAndConvert("tacocloud.order.queue");
     }
-
 
 }

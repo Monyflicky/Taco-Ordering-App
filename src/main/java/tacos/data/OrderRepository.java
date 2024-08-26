@@ -1,11 +1,13 @@
 package tacos.data;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Mono;
 import tacos.model.TacoOrder;
 
 
-public interface OrderRepository extends CrudRepository<TacoOrder, Long>{
+public interface OrderRepository extends ReactiveCrudRepository<TacoOrder, Long>{
 	
-	TacoOrder save(TacoOrder order);
+	Mono<TacoOrder> save(TacoOrder order);
 }

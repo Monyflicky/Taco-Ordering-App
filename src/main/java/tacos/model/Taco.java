@@ -32,6 +32,12 @@ public class Taco implements Serializable {
     //@OneToMany(cascade = CascadeType.PERSIST)
     private List<Ingredient> ingredients;
 
+    public Taco(String name){
+        this.name = name;
+    }
+    public Taco(){
+
+    }
     public void addIngredient(Ingredient ingredient) {
         this.ingredients.add(ingredient);
     }

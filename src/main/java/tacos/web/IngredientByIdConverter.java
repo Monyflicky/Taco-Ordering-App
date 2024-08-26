@@ -40,8 +40,10 @@ public class IngredientByIdConverter implements Converter<String, Ingredient> {
 				 ingredientMap.put("SRCR",
 				 new Ingredient("SRCR", "Sour Cream", Type.SAUCE));
 	}*/
+//
 	@Override
 	public Ingredient convert(String id) {
-		return ingredientRepo.findById(id).orElse(null);
+		return ingredientRepo.findById(id).block();
 	}
+
 }

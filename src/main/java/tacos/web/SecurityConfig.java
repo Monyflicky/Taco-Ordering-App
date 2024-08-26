@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,6 +29,7 @@ import reactor.core.publisher.Mono;
 import tacos.data.UserRepository;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Supplier;
@@ -48,14 +50,21 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService(UserRepository userRepo) {
         return username -> {
-            tacos.model.User user = userRepo.findByUsername(username);
-
-            if (user != null) {
-                return user; // Return user details
-            }
-
-            throw new UsernameNotFoundException("User '" + username + "' not found");
+            return userRepo.findByUsername(username)
+                    .map(user -> new User(
+                            user.getUsername(),
+                            user.getPassword(),
+                            // Set user authorities or roles here
+                            new ArrayList<>()
+                    ))
+                    .switchIfEmpty(Mono.error(new UsernameNotFoundException("User '" + username + "' not found")))
+                    .block(); // Convert Mono to UserDetails synchronously
         };
+//        return username -> {
+//            tacos.model.User user = userRepo.findByUsername(username);
+//
+//            throw new UsernameNotFoundException("User '" + username + "' not found");
+//        };
     }
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

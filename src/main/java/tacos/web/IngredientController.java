@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import tacos.data.IngredientRepository;
 import tacos.model.Ingredient;
 
@@ -20,7 +22,7 @@ public class IngredientController {
     }
 
     @GetMapping
-    public Iterable<Ingredient> allIngredients(){
+    public Flux<Ingredient> allIngredients(){
         return repo.findAll();
     }
 
@@ -28,7 +30,7 @@ public class IngredientController {
     @ResponseStatus(HttpStatus.CREATED)
     @PreAuthorize("#{hasRole('Admin')}")
     //@PreAuthorize("hasRole('ROLE_ADMIN')")
-    public Ingredient saveIngredient(@RequestBody Ingredient ingredient)
+    public Mono<Ingredient> saveIngredient(@RequestBody Ingredient ingredient)
     {
         return repo.save(ingredient);
     }

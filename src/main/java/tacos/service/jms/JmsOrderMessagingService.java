@@ -1,4 +1,4 @@
-package tacos.service;
+package tacos.service.jms;
 
 import jakarta.jms.JMSException;
 import jakarta.jms.Message;

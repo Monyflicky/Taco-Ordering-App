@@ -1,1213 +1,140 @@
-2024-08-06 21:03:51 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-06 21:03:51 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 1280 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-06 21:03:51 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-06 21:03:51 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-06 21:03:51 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-06 21:03:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-06 21:03:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 189 ms. Found 4 JPA repository interfaces.
-2024-08-06 21:03:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-06 21:03:54 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:03:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-06 21:03:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-06 21:03:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-06 21:03:54 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2969 ms
-2024-08-06 21:03:54 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-06 21:03:55 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@4db58a86
-2024-08-06 21:03:55 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-06 21:03:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-06 21:03:55 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-06 21:03:55 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-06 21:03:56 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-06 21:03:57 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-06 21:03:57 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-06 21:03:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:03:59 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-06 21:04:00 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5eeba5a8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@501064cd, org.springframework.security.web.context.SecurityContextHolderFilter@29b3d8a2, org.springframework.security.web.header.HeaderWriterFilter@46829f05, org.springframework.web.filter.CorsFilter@3ee271e9, org.springframework.security.web.authentication.logout.LogoutFilter@4c44f504, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3cc7b952, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@46c90787, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a28fc47, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@467abb13, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1886ddca, org.springframework.security.web.access.ExceptionTranslationFilter@6a3d9f84, tacos.web.ProhibitFilter@1b43fd97, tacos.web.RobotAuthenticationFilter@48a6c43e, org.springframework.security.web.access.intercept.AuthorizationFilter@355736e5]
-2024-08-06 21:04:01 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-06 21:04:01 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:04:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-06 21:04:01 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 10.496 seconds (process running for 12.123)
-2024-08-06 21:04:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-06 21:04:23 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-06 21:04:23 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2024-08-06 21:04:23 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-06 21:04:23 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-06 21:05:22 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 21:05:22 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalStateException: No 'defaultDestination' or 'defaultDestinationName' specified. Check configuration of JmsTemplate.] with root cause
-java.lang.IllegalStateException: No 'defaultDestination' or 'defaultDestinationName' specified. Check configuration of JmsTemplate.
-	at org.springframework.jms.core.JmsTemplate.getRequiredDefaultDestinationName(JmsTemplate.java:229)
-	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:596)
-	at tacos.service.JmsOrderMessagingService.sendOrder(JmsOrderMessagingService.java:24)
-	at tacos.web.OrderApiController.postTacoOrder(OrderApiController.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at tacos.web.RobotAuthenticationFilter.doFilterInternal(RobotAuthenticationFilter.java:21)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at tacos.web.ProhibitFilter.doFilterInternal(ProhibitFilter.java:26)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-08-06 21:05:22 DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
-2024-08-06 21:05:22 DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
-2024-08-06 21:05:22 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 21:14:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:14:26 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-06 21:14:26 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-06 21:14:30 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-06 21:14:30 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 18508 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-06 21:14:30 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-06 21:14:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-06 21:14:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-06 21:14:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-06 21:14:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186 ms. Found 4 JPA repository interfaces.
-2024-08-06 21:14:33 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-06 21:14:33 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:14:33 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-06 21:14:33 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-06 21:14:33 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-06 21:14:33 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3138 ms
-2024-08-06 21:14:33 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-06 21:14:33 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@55576ead
-2024-08-06 21:14:34 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-06 21:14:34 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-06 21:14:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-06 21:14:34 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-06 21:14:34 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-06 21:14:36 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-06 21:14:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-06 21:14:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:14:39 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-06 21:14:40 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e5f5022, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fbf566f, org.springframework.security.web.context.SecurityContextHolderFilter@7aab7f9c, org.springframework.security.web.header.HeaderWriterFilter@48014396, org.springframework.web.filter.CorsFilter@498f3155, org.springframework.security.web.authentication.logout.LogoutFilter@4ada8a4b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5c896dd0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6644ecba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dc1d4c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e86d9d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@766fe84, org.springframework.security.web.access.ExceptionTranslationFilter@7372057c, tacos.web.ProhibitFilter@239c600a, tacos.web.RobotAuthenticationFilter@46754638, org.springframework.security.web.access.intercept.AuthorizationFilter@4b4787f9]
-2024-08-06 21:14:41 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-06 21:14:41 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:14:41 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-06 21:14:41 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 11.667 seconds (process running for 12.957)
-2024-08-06 21:16:20 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-06 21:16:20 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-06 21:16:20 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-06 21:16:20 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-06 21:16:20 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-06 21:17:15 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 21:17:15 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is java.io.NotSerializableException: tacos.model.Taco] with root cause
-java.io.NotSerializableException: tacos.model.Taco
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1200)
-	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
-	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072)
-	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529)
-	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
-	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
-	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
-	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
-	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
-	at org.apache.activemq.artemis.jms.client.ActiveMQObjectMessage.setObject(ActiveMQObjectMessage.java:118)
-	at org.apache.activemq.artemis.jms.client.ActiveMQSession.createObjectMessage(ActiveMQSession.java:216)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:422)
-	at jdk.proxy2/jdk.proxy2.$Proxy165.createObjectMessage(Unknown Source)
-	at tacos.service.JmsOrderMessagingService.lambda$sendOrder$0(JmsOrderMessagingService.java:24)
-	at org.springframework.jms.core.JmsTemplate.doSend(JmsTemplate.java:630)
-	at org.springframework.jms.core.JmsTemplate.lambda$send$3(JmsTemplate.java:612)
-	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:530)
-	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:610)
-	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:596)
-	at tacos.service.JmsOrderMessagingService.sendOrder(JmsOrderMessagingService.java:24)
-	at tacos.web.OrderApiController.postTacoOrder(OrderApiController.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at tacos.web.RobotAuthenticationFilter.doFilterInternal(RobotAuthenticationFilter.java:21)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at tacos.web.ProhibitFilter.doFilterInternal(ProhibitFilter.java:26)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-08-06 21:17:15 DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
-2024-08-06 21:17:15 DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
-2024-08-06 21:17:15 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 21:24:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:24:01 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-06 21:24:01 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-06 21:24:06 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-06 21:24:06 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 17060 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-06 21:24:06 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-06 21:24:06 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-06 21:24:06 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-06 21:24:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-06 21:24:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 183 ms. Found 4 JPA repository interfaces.
-2024-08-06 21:24:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-06 21:24:09 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:24:09 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-06 21:24:09 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-06 21:24:09 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-06 21:24:09 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3020 ms
-2024-08-06 21:24:10 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-06 21:24:10 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@161481b9
-2024-08-06 21:24:10 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-06 21:24:10 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-06 21:24:10 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-06 21:24:10 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-06 21:24:11 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-06 21:24:12 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-06 21:24:13 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-06 21:24:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:24:14 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-06 21:24:15 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17c9150f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1993effa, org.springframework.security.web.context.SecurityContextHolderFilter@4dbe7023, org.springframework.security.web.header.HeaderWriterFilter@53eb0810, org.springframework.web.filter.CorsFilter@31b6c885, org.springframework.security.web.authentication.logout.LogoutFilter@7dcd606e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@363817b, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@27b52c20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a2abd5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3341b6e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@513c72b5, org.springframework.security.web.access.ExceptionTranslationFilter@20296a3b, tacos.web.ProhibitFilter@e0264f0, tacos.web.RobotAuthenticationFilter@8e8a6f5, org.springframework.security.web.access.intercept.AuthorizationFilter@7568ecd4]
-2024-08-06 21:24:16 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-06 21:24:16 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:24:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-06 21:24:16 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 10.696 seconds (process running for 11.888)
-2024-08-06 21:24:38 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-06 21:24:38 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-06 21:24:38 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-06 21:24:38 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-06 21:24:38 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-06 21:26:03 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 21:26:03 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is java.io.NotSerializableException: tacos.model.Ingredient] with root cause
-java.io.NotSerializableException: tacos.model.Ingredient
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1200)
-	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
-	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072)
-	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529)
-	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
-	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
-	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
-	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
-	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
-	at java.base/java.util.ArrayList.writeObject(ArrayList.java:948)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1072)
-	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529)
-	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
-	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
-	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
-	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
-	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
-	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
-	at org.apache.activemq.artemis.jms.client.ActiveMQObjectMessage.setObject(ActiveMQObjectMessage.java:118)
-	at org.apache.activemq.artemis.jms.client.ActiveMQSession.createObjectMessage(ActiveMQSession.java:216)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.jms.connection.CachingConnectionFactory$CachedSessionInvocationHandler.invoke(CachingConnectionFactory.java:422)
-	at jdk.proxy2/jdk.proxy2.$Proxy165.createObjectMessage(Unknown Source)
-	at tacos.service.JmsOrderMessagingService.lambda$sendOrder$0(JmsOrderMessagingService.java:24)
-	at org.springframework.jms.core.JmsTemplate.doSend(JmsTemplate.java:630)
-	at org.springframework.jms.core.JmsTemplate.lambda$send$3(JmsTemplate.java:612)
-	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:530)
-	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:610)
-	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:596)
-	at tacos.service.JmsOrderMessagingService.sendOrder(JmsOrderMessagingService.java:24)
-	at tacos.web.OrderApiController.postTacoOrder(OrderApiController.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at tacos.web.RobotAuthenticationFilter.doFilterInternal(RobotAuthenticationFilter.java:21)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at tacos.web.ProhibitFilter.doFilterInternal(ProhibitFilter.java:26)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-08-06 21:26:03 DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
-2024-08-06 21:26:03 DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
-2024-08-06 21:26:03 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 21:26:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:26:38 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-06 21:26:38 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-06 21:26:43 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-06 21:26:43 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 20972 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-06 21:26:43 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-06 21:26:43 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-06 21:26:43 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-06 21:26:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-06 21:26:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 179 ms. Found 4 JPA repository interfaces.
-2024-08-06 21:26:45 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-06 21:26:45 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:26:45 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-06 21:26:45 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-06 21:26:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-06 21:26:46 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2835 ms
-2024-08-06 21:26:46 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-06 21:26:46 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@65d4f0a4
-2024-08-06 21:26:46 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-06 21:26:46 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-06 21:26:46 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-06 21:26:46 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-06 21:26:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-06 21:26:48 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-06 21:26:49 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-06 21:26:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 21:26:50 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-06 21:26:51 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2dc56d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17c9150f, org.springframework.security.web.context.SecurityContextHolderFilter@657e0b5, org.springframework.security.web.header.HeaderWriterFilter@61b552fe, org.springframework.web.filter.CorsFilter@1993effa, org.springframework.security.web.authentication.logout.LogoutFilter@341f8bd9, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@61e409dd, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@66de7bc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@469e5a0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2abd5c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31b6c885, org.springframework.security.web.access.ExceptionTranslationFilter@20f3cc4d, tacos.web.ProhibitFilter@513c72b5, tacos.web.RobotAuthenticationFilter@e0264f0, org.springframework.security.web.access.intercept.AuthorizationFilter@51e048bf]
-2024-08-06 21:26:52 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-06 21:26:52 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-06 21:26:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-06 21:26:52 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 10.118 seconds (process running for 11.243)
-2024-08-06 21:27:11 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-06 21:27:11 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-06 21:27:11 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-06 21:27:11 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-06 21:27:11 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-06 21:28:35 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-06 22:21:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 22:21:44 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-06 22:21:44 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-06 22:21:49 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-06 22:21:49 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 12256 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-06 22:21:49 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-06 22:21:49 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-06 22:21:49 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-06 22:21:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-06 22:21:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 176 ms. Found 4 JPA repository interfaces.
-2024-08-06 22:21:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-06 22:21:52 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-06 22:21:52 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-06 22:21:52 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-06 22:21:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-06 22:21:52 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2985 ms
-2024-08-06 22:21:52 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-06 22:21:53 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@5f91f5a8
-2024-08-06 22:21:53 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-06 22:21:53 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-06 22:21:53 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-06 22:21:53 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-06 22:21:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-06 22:21:55 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-06 22:21:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-06 22:21:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-06 22:21:58 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-06 22:21:59 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@504b6a89, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f2db41d, org.springframework.security.web.context.SecurityContextHolderFilter@1996a346, org.springframework.security.web.header.HeaderWriterFilter@129d599a, org.springframework.web.filter.CorsFilter@29bf24ff, org.springframework.security.web.authentication.logout.LogoutFilter@75a9d233, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1d8785a5, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3e143da0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ca9afe3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dbc47c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15fc44ca, org.springframework.security.web.access.ExceptionTranslationFilter@7c6b4e2, tacos.web.ProhibitFilter@1e687bde, tacos.web.RobotAuthenticationFilter@3cc7b952, org.springframework.security.web.access.intercept.AuthorizationFilter@68bcccc9]
-2024-08-06 22:22:00 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-06 22:22:00 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-06 22:22:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-06 22:22:00 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 11.343 seconds (process running for 12.602)
-2024-08-06 22:22:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-06 22:22:37 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-06 22:22:37 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-06 22:22:37 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-06 22:22:37 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-06 22:22:42 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 06:27:52 INFO  o.s.j.c.CachingConnectionFactory - Encountered a JMSException - resetting the underlying JMS Connection
-jakarta.jms.JMSException: ActiveMQNotConnectedException[errorType=NOT_CONNECTED message=AMQ219006: Channel disconnected]
-	at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:714)
-	at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:735)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.callSessionFailureListeners(ClientSessionFactoryImpl.java:868)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.failoverOrReconnect(ClientSessionFactoryImpl.java:794)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:566)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:559)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl$1.run(ClientSessionFactoryImpl.java:417)
-	at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:57)
-	at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:32)
-	at org.apache.activemq.artemis.utils.actors.ProcessorBase.executePendingTasks(ProcessorBase.java:68)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118)
-Caused by: org.apache.activemq.artemis.api.core.ActiveMQNotConnectedException: AMQ219006: Channel disconnected
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.connectionDestroyed(ClientSessionFactoryImpl.java:410)
-	at org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$Listener$1.run(NettyConnector.java:1240)
-	... 6 common frames omitted
-2024-08-07 06:28:09 WARN  com.zaxxer.hikari.pool.HikariPool - tacocloud - Thread starvation or clock leap detected (housekeeper delta=1m9s640ms586µs100ns).
-2024-08-07 06:47:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 06:47:46 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 06:47:46 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 06:47:56 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 06:47:56 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 27212 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 06:47:56 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 06:47:56 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 06:47:56 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 06:47:57 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 06:47:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 226 ms. Found 4 JPA repository interfaces.
-2024-08-07 06:47:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 06:47:59 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 06:47:59 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 06:47:59 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 06:47:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 06:47:59 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3751 ms
-2024-08-07 06:48:00 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 06:48:00 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@66d321cd
-2024-08-07 06:48:00 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 06:48:00 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 06:48:00 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 06:48:01 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 06:48:01 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 06:48:03 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 06:48:03 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 06:48:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 06:48:05 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderApiController' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jmsOrderMessagingService' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]: Failed to instantiate [org.springframework.jms.core.JmsTemplate]: Factory method 'jmsTemplate' threw exception with message: Error creating bean with name 'jmsOrderMessagingService': Requested bean is currently in creation: Is there an unresolvable circular reference?
-2024-08-07 06:48:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 06:48:05 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 06:48:05 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 06:48:05 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 06:48:05 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+2024-08-24 08:41:51 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-24 08:41:52 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-24 08:41:52 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-24 08:41:52 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-24 08:41:52 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 2800 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-24 08:41:52 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-24 08:41:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-24 08:41:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 213 ms. Found 4 R2DBC repository interfaces.
+2024-08-24 08:41:54 DEBUG o.s.i.c.IntegrationComponentScanRegistrar$1 - Identified candidate component class: file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\integration\FileWriterGateWay.class]
+2024-08-24 08:41:54 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-24 08:41:54 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-24 08:41:54 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-24 08:41:58 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38a27ace, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41289e88, org.springframework.security.web.context.SecurityContextHolderFilter@3186f8f5, org.springframework.security.web.header.HeaderWriterFilter@6c737fdb, org.springframework.web.filter.CorsFilter@7e8783b0, org.springframework.security.web.authentication.logout.LogoutFilter@7ea039b4, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1237cade, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@71f10042, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69a3bf40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c731a16, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@788d9139, org.springframework.security.web.access.ExceptionTranslationFilter@56a72887, tacos.web.ProhibitFilter@53d2f0ec, tacos.web.RobotAuthenticationFilter@560be8c0, org.springframework.security.web.access.intercept.AuthorizationFilter@77401977]
+2024-08-24 08:41:59 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-24 08:41:59 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-24 08:41:59 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-24 08:41:59 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-24 08:41:59 INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'fileWriterGateWay#writeToFile(String, String)'
+2024-08-24 08:41:59 INFO  o.s.i.g.AnnotationGatewayProxyFactoryBean - started bean 'fileWriterGateWay'; defined in: 'file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\integration\FileWriterGateWay.class]'; from source: 'file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\integration\FileWriterGateWay.class]'
+2024-08-24 08:41:59 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 06:48:05 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
 
-***************************
-APPLICATION FAILED TO START
-***************************
+2024-08-24 08:41:59 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 7.089 seconds (process running for 9.159)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-24 08:42:00 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-24 08:42:00 INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'fileWriterGateWay#writeToFile(String, String)'
+2024-08-24 08:42:00 INFO  o.s.i.g.AnnotationGatewayProxyFactoryBean - stopped bean 'fileWriterGateWay'; defined in: 'file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\integration\FileWriterGateWay.class]'; from source: 'file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\integration\FileWriterGateWay.class]'
+2024-08-24 08:42:00 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-24 08:42:00 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-24 08:42:00 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-24 08:50:29 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-24 08:50:29 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-24 08:50:30 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-24 08:50:30 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-24 08:50:30 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 13324 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-24 08:50:30 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-24 08:50:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-24 08:50:32 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 275 ms. Found 4 R2DBC repository interfaces.
+2024-08-24 08:50:32 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-24 08:50:32 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-24 08:50:32 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-24 08:50:36 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19e5e110, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e295f7f, org.springframework.security.web.context.SecurityContextHolderFilter@5e3d84a, org.springframework.security.web.header.HeaderWriterFilter@60484429, org.springframework.web.filter.CorsFilter@4b762988, org.springframework.security.web.authentication.logout.LogoutFilter@a4dcede, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3346e906, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@753e4eb5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fce3ed7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54033a65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24f2608b, org.springframework.security.web.access.ExceptionTranslationFilter@1aaf73b7, tacos.web.ProhibitFilter@12a9e864, tacos.web.RobotAuthenticationFilter@462f8fe9, org.springframework.security.web.access.intercept.AuthorizationFilter@7f792530]
+2024-08-24 08:50:37 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-24 08:50:37 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-24 08:50:37 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-24 08:50:37 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-24 08:50:37 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
 
-Description:
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
 
-The dependencies of some of the beans in the application context form a cycle:
+2024-08-24 08:50:37 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 7.885 seconds (process running for 10.358)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-24 08:50:39 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-24 08:50:39 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-24 08:50:39 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-24 08:50:39 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-24 08:52:48 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-24 08:52:48 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-24 08:52:48 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-24 08:52:49 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-24 08:52:49 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 31872 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-24 08:52:49 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-24 08:52:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-24 08:52:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 230 ms. Found 4 R2DBC repository interfaces.
+2024-08-24 08:52:51 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-24 08:52:51 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-24 08:52:51 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-24 08:52:54 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@320770d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4769378c, org.springframework.security.web.context.SecurityContextHolderFilter@3c9971af, org.springframework.security.web.header.HeaderWriterFilter@39403943, org.springframework.web.filter.CorsFilter@1d6a22dd, org.springframework.security.web.authentication.logout.LogoutFilter@64b8eb96, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@52bc6fcf, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1f8d42d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66d61298, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b9fea11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67671db1, org.springframework.security.web.access.ExceptionTranslationFilter@13809363, tacos.web.ProhibitFilter@6e6f5842, tacos.web.RobotAuthenticationFilter@60b4c754, org.springframework.security.web.access.intercept.AuthorizationFilter@50930bff]
+2024-08-24 08:52:55 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-24 08:52:55 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-24 08:52:55 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-24 08:52:55 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-24 08:52:55 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
 
-   orderApiController defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]
-┌─────┐
-|  jmsOrderMessagingService defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]
-↑     ↓
-|  jmsTemplate defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]
-└─────┘
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
 
-
-Action:
-
-Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
-
-2024-08-07 07:04:15 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:04:16 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 25012 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:04:16 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:04:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:04:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:04:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:04:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 242 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:04:19 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:04:19 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:04:19 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:04:19 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:04:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:04:19 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3176 ms
-2024-08-07 07:04:19 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:04:19 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@3756d11d
-2024-08-07 07:04:19 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:04:19 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:04:20 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:04:20 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:04:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:04:21 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:04:22 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:04:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:04:23 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jmsOrderReceiver' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'org.springframework.jms.support.converter.MessageConverter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2024-08-07 07:04:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:04:23 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:04:23 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:04:23 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 07:04:23 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 07:04:23 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in tacos.service.JmsOrderReceiver required a bean of type 'org.springframework.jms.support.converter.MessageConverter' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.jms.support.converter.MessageConverter' in your configuration.
-
-2024-08-07 07:05:47 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:05:48 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 25164 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:05:48 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:05:48 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:05:48 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:05:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:05:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 190 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:05:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:05:51 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:05:51 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:05:51 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:05:51 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:05:51 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3147 ms
-2024-08-07 07:05:51 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:05:51 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@6c8f0ff1
-2024-08-07 07:05:51 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:05:51 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:05:52 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:05:52 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:05:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:05:54 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:05:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:05:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:05:55 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07 07:05:56 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13c94c22, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dd4c15c, org.springframework.security.web.context.SecurityContextHolderFilter@4eeab85c, org.springframework.security.web.header.HeaderWriterFilter@577af033, org.springframework.web.filter.CorsFilter@12cbf24b, org.springframework.security.web.authentication.logout.LogoutFilter@135f3432, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5c2cd020, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7bc0a47b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b7c534b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2892e024, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2dec69b9, org.springframework.security.web.access.ExceptionTranslationFilter@1b35c554, tacos.web.ProhibitFilter@749d887a, tacos.web.RobotAuthenticationFilter@3f887994, org.springframework.security.web.access.intercept.AuthorizationFilter@783938f3]
-2024-08-07 07:05:56 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-07 07:05:56 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:05:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-07 07:05:56 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 9.52 seconds (process running for 10.949)
-2024-08-07 07:06:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-07 07:06:41 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-07 07:06:41 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-07 07:06:41 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-07 07:06:41 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-07 07:06:42 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 07:08:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:08:59 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:08:59 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:09:06 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:09:07 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 16740 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:09:07 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:09:07 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:09:07 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:09:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:09:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 208 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:09:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:09:10 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:09:10 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:09:10 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:09:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:09:10 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3082 ms
-2024-08-07 07:09:10 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:09:10 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@365e35b2
-2024-08-07 07:09:10 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:09:10 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:09:10 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:09:10 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:09:11 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:09:12 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:09:12 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:09:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:09:13 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderApiController' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jmsOrderMessagingService' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]: Failed to instantiate [org.springframework.jms.core.JmsTemplate]: Factory method 'jmsTemplate' threw exception with message: Error creating bean with name 'jmsOrderReceiver' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate': Requested bean is currently in creation: Is there an unresolvable circular reference?
-2024-08-07 07:09:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:09:13 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:09:13 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:09:13 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 07:09:13 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 07:09:13 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The dependencies of some of the beans in the application context form a cycle:
-
-   orderApiController defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]
-      ↓
-   jmsOrderMessagingService defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]
-┌─────┐
-|  jmsTemplate defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]
-↑     ↓
-|  jmsOrderReceiver defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]
-└─────┘
-
-
-Action:
-
-Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
-
-2024-08-07 07:16:33 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:16:33 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 23076 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:16:33 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:16:33 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:16:33 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:16:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:16:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 197 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:16:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:16:36 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:16:36 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:16:36 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:16:36 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:16:36 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3240 ms
-2024-08-07 07:16:36 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:16:37 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@371a2676
-2024-08-07 07:16:37 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:16:37 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:16:37 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:16:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:16:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:16:39 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:16:39 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:16:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:16:40 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderApiController' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jmsOrderMessagingService' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]: Failed to instantiate [org.springframework.jms.core.JmsTemplate]: Factory method 'jmsTemplate' threw exception with message: Error creating bean with name 'jmsOrderReceiver' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate': Requested bean is currently in creation: Is there an unresolvable circular reference?
-2024-08-07 07:16:40 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:16:40 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:16:40 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:16:40 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 07:16:40 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 07:16:40 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The dependencies of some of the beans in the application context form a cycle:
-
-   orderApiController defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]
-      ↓
-   jmsOrderMessagingService defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]
-┌─────┐
-|  jmsTemplate defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]
-↑     ↓
-|  jmsOrderReceiver defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]
-└─────┘
-
-
-Action:
-
-Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
-
-2024-08-07 07:19:02 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:19:02 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 27532 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:19:02 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:19:02 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:19:02 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:19:03 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:19:04 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 184 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:19:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:19:05 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:19:05 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:19:05 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:19:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:19:05 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3184 ms
-2024-08-07 07:19:05 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:19:05 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@371a2676
-2024-08-07 07:19:05 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:19:06 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:19:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:19:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:19:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:19:08 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:19:08 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:19:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:19:09 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderApiController' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jmsOrderMessagingService' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]: Failed to instantiate [org.springframework.jms.core.JmsTemplate]: Factory method 'jmsTemplate' threw exception with message: Error creating bean with name 'jmsOrderReceiver' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate': Requested bean is currently in creation: Is there an unresolvable circular reference?
-2024-08-07 07:19:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:19:09 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:19:09 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:19:09 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 07:19:09 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 07:19:09 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The dependencies of some of the beans in the application context form a cycle:
-
-   orderApiController defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]
-      ↓
-   jmsOrderMessagingService defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderMessagingService.class]
-┌─────┐
-|  jmsTemplate defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]
-↑     ↓
-|  jmsOrderReceiver defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]
-└─────┘
-
-
-Action:
-
-Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
-
-2024-08-07 07:21:45 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:21:45 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 4692 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:21:45 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:21:45 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:21:45 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:21:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:21:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 227 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:21:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:21:48 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:21:48 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:21:48 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:21:48 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:21:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3453 ms
-2024-08-07 07:21:48 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:21:49 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@1eb107c3
-2024-08-07 07:21:49 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:21:49 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:21:49 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:21:49 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:21:50 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:21:51 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:21:51 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:21:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:21:52 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07 07:21:53 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4769680, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e438899, org.springframework.security.web.context.SecurityContextHolderFilter@619c1e38, org.springframework.security.web.header.HeaderWriterFilter@5a77491e, org.springframework.web.filter.CorsFilter@6ce8d0ca, org.springframework.security.web.authentication.logout.LogoutFilter@30f38c5c, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@30c093e8, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7ce4c166, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51c13b9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ddab584, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d7c9afd, org.springframework.security.web.access.ExceptionTranslationFilter@253d4c8d, tacos.web.ProhibitFilter@6d0ec544, tacos.web.RobotAuthenticationFilter@2fcb9f3c, org.springframework.security.web.access.intercept.AuthorizationFilter@f0d4a0a]
-2024-08-07 07:21:54 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-07 07:21:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:21:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-07 07:21:54 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 9.604 seconds (process running for 10.972)
-2024-08-07 07:22:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-07 07:22:25 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-07 07:22:25 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-08-07 07:22:25 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-07 07:22:25 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-07 07:22:26 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 07:23:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:23:33 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:23:33 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:23:41 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:23:41 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 19924 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:23:41 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:23:41 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:23:41 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:23:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:23:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 215 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:23:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:23:44 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:23:44 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:23:44 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:23:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:23:44 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3331 ms
-2024-08-07 07:23:44 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:23:45 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@3c7af87e
-2024-08-07 07:23:45 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:23:45 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:23:45 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:23:45 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:23:45 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:23:47 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:23:47 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:23:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:23:48 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderApiController' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\web\OrderApiController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'tacos.data.OrderMessagingService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2024-08-07 07:23:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:23:48 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:23:48 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:23:48 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 07:23:48 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 07:23:48 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in tacos.web.OrderApiController required a bean of type 'tacos.data.OrderMessagingService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'tacos.data.OrderMessagingService' in your configuration.
-
-2024-08-07 07:26:05 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:26:05 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 23464 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:26:05 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:26:05 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:26:05 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:26:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:26:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 203 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:26:08 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:26:08 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:26:08 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:26:08 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:26:08 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:26:08 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3208 ms
-2024-08-07 07:26:08 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:26:09 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@371a2676
-2024-08-07 07:26:09 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:26:09 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:26:09 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:26:09 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:26:10 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:26:11 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:26:11 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:26:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:26:12 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jmsOrderReceiver' defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jmsTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]: Failed to instantiate [org.springframework.jms.core.JmsTemplate]: Factory method 'jmsTemplate' threw exception with message: Error creating bean with name 'jmsOrderReceiver': Requested bean is currently in creation: Is there an unresolvable circular reference?
-2024-08-07 07:26:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:26:12 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:26:12 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:26:12 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-08-07 07:26:12 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-08-07 07:26:12 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The dependencies of some of the beans in the application context form a cycle:
-
-┌─────┐
-|  jmsOrderReceiver defined in file [C:\Users\Owner\Documents\taco-cloud\target\classes\tacos\service\JmsOrderReceiver.class]
-↑     ↓
-|  jmsTemplate defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$JmsTemplateConfiguration.class]
-└─────┘
-
-
-Action:
-
-Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
-
-2024-08-07 07:27:38 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:27:38 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 24280 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:27:38 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:27:38 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:27:38 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:27:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:27:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 190 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:27:41 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:27:41 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:27:41 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:27:41 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:27:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:27:41 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3296 ms
-2024-08-07 07:27:41 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:27:42 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@64d978fd
-2024-08-07 07:27:42 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:27:42 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:27:42 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:27:42 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:27:43 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:27:44 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:27:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:27:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:27:45 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07 07:27:46 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c446dd6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13fd9322, org.springframework.security.web.context.SecurityContextHolderFilter@e78ba6b, org.springframework.security.web.header.HeaderWriterFilter@7772e860, org.springframework.web.filter.CorsFilter@6f54e777, org.springframework.security.web.authentication.logout.LogoutFilter@558b0a2b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@6f9d07c6, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@30ade97d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76275955, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21167a54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61448ac5, org.springframework.security.web.access.ExceptionTranslationFilter@155baaa, tacos.web.ProhibitFilter@e8161e6, tacos.web.RobotAuthenticationFilter@719a8797, org.springframework.security.web.access.intercept.AuthorizationFilter@56810a37]
-2024-08-07 07:27:47 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-07 07:27:47 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:27:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-07 07:27:47 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 9.54 seconds (process running for 10.913)
-2024-08-07 07:40:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:40:22 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:40:22 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:40:29 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:40:29 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 9000 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:40:29 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:40:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:40:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:40:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:40:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:40:33 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:40:33 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:40:33 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:40:33 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:40:33 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:40:33 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3169 ms
-2024-08-07 07:40:33 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:40:33 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@5479b7e8
-2024-08-07 07:40:33 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:40:33 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:40:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:40:34 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:40:34 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:40:35 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:40:36 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:40:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:40:37 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07 07:40:37 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23f1e21e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12ed05aa, org.springframework.security.web.context.SecurityContextHolderFilter@72d789a2, org.springframework.security.web.header.HeaderWriterFilter@5a768f14, org.springframework.web.filter.CorsFilter@7c8d4dfc, org.springframework.security.web.authentication.logout.LogoutFilter@4d2770d9, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@17ccc119, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7e59fe94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e8e28e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e5ff206, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d08bcbc, org.springframework.security.web.access.ExceptionTranslationFilter@1999c61b, tacos.web.ProhibitFilter@21c54e11, tacos.web.RobotAuthenticationFilter@5b7fdfd6, org.springframework.security.web.access.intercept.AuthorizationFilter@657fc4d4]
-2024-08-07 07:40:38 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-07 07:40:38 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:40:38 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-07 07:40:38 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 9.201 seconds (process running for 10.554)
-2024-08-07 07:41:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-07 07:41:05 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-07 07:41:05 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-08-07 07:41:05 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-07 07:41:05 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-07 07:41:06 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 07:43:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:43:38 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 07:43:38 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 07:43:42 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 07:43:42 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 21456 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 07:43:42 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 07:43:42 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 07:43:42 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 07:43:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 07:43:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 290 ms. Found 4 JPA repository interfaces.
-2024-08-07 07:43:46 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 07:43:46 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:43:46 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 07:43:46 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 07:43:47 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 07:43:47 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4067 ms
-2024-08-07 07:43:47 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 07:43:47 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@5b3a9af7
-2024-08-07 07:43:47 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 07:43:47 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 07:43:47 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 07:43:48 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 07:43:48 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 07:43:49 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 07:43:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 07:43:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 07:43:52 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07 07:43:53 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7bebef6a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ced743e, org.springframework.security.web.context.SecurityContextHolderFilter@28b63bcb, org.springframework.security.web.header.HeaderWriterFilter@5b5cea3a, org.springframework.web.filter.CorsFilter@5b9640a9, org.springframework.security.web.authentication.logout.LogoutFilter@44a550d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4ae69662, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6909d51c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@230c1748, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6be1941, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d49f83b, org.springframework.security.web.access.ExceptionTranslationFilter@555d44f3, tacos.web.ProhibitFilter@59fdc847, tacos.web.RobotAuthenticationFilter@6e061bc2, org.springframework.security.web.access.intercept.AuthorizationFilter@1a5ff74c]
-2024-08-07 07:43:54 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-07 07:43:54 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-07 07:43:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-07 07:43:54 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 12.716 seconds (process running for 14.345)
-2024-08-07 07:44:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-07 07:44:25 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-07 07:44:25 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2024-08-07 07:44:25 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-07 07:44:25 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-07 07:44:38 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 08:01:40 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 08:01:40 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown initiated...
-2024-08-07 08:01:40 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Shutdown completed.
-2024-08-07 08:01:48 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-08-07 08:01:48 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 17308 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
-2024-08-07 08:01:48 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
-2024-08-07 08:01:48 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-08-07 08:01:48 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-08-07 08:01:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07 08:01:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 206 ms. Found 4 JPA repository interfaces.
-2024-08-07 08:01:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-08-07 08:01:52 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-08-07 08:01:52 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-08-07 08:01:52 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2024-08-07 08:01:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-08-07 08:01:52 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3314 ms
-2024-08-07 08:01:52 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Starting...
-2024-08-07 08:01:52 INFO  com.zaxxer.hikari.pool.HikariPool - tacocloud - Added connection org.postgresql.jdbc.PgConnection@29f35f7f
-2024-08-07 08:01:52 INFO  com.zaxxer.hikari.HikariDataSource - tacocloud - Start completed.
-2024-08-07 08:01:52 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07 08:01:53 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-08-07 08:01:53 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-08-07 08:01:53 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07 08:01:55 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: tacos.model.IngredientRef (class must be instantiated by Interceptor)
-2024-08-07 08:01:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07 08:01:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07 08:01:57 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07 08:01:59 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@247f13e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d56dd7b, org.springframework.security.web.context.SecurityContextHolderFilter@71eba870, org.springframework.security.web.header.HeaderWriterFilter@3b66f999, org.springframework.web.filter.CorsFilter@17b6dc1a, org.springframework.security.web.authentication.logout.LogoutFilter@59c96b91, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5ef4066c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4b544299, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e4bd7c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ab0a3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cb103a2, org.springframework.security.web.access.ExceptionTranslationFilter@5ded7244, tacos.web.ProhibitFilter@608dcff8, tacos.web.RobotAuthenticationFilter@1bcb6b97, org.springframework.security.web.access.intercept.AuthorizationFilter@6d4ca991]
-2024-08-07 08:02:00 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-08-07 08:02:00 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-08-07 08:02:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-08-07 08:02:00 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 12.588 seconds (process running for 14.182)
-2024-08-07 08:05:56 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-07 08:05:56 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-08-07 08:05:56 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-08-07 08:05:56 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-07 08:05:57 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-07 08:05:58 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 08:11:45 DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/orders
-2024-08-07 08:11:45 DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/orders
-2024-08-07 08:11:45 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-08-07 09:05:29 INFO  o.s.j.c.CachingConnectionFactory - Encountered a JMSException - resetting the underlying JMS Connection
-jakarta.jms.JMSException: ActiveMQNotConnectedException[errorType=NOT_CONNECTED message=AMQ219006: Channel disconnected]
-	at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:714)
-	at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:735)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.callSessionFailureListeners(ClientSessionFactoryImpl.java:868)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.failoverOrReconnect(ClientSessionFactoryImpl.java:794)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:566)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:559)
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl$1.run(ClientSessionFactoryImpl.java:417)
-	at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:57)
-	at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:32)
-	at org.apache.activemq.artemis.utils.actors.ProcessorBase.executePendingTasks(ProcessorBase.java:68)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118)
-Caused by: org.apache.activemq.artemis.api.core.ActiveMQNotConnectedException: AMQ219006: Channel disconnected
-	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.connectionDestroyed(ClientSessionFactoryImpl.java:410)
-	at org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$Listener$1.run(NettyConnector.java:1240)
-	... 6 common frames omitted
-2024-08-07 09:05:57 WARN  com.zaxxer.hikari.pool.HikariPool - tacocloud - Thread starvation or clock leap detected (housekeeper delta=3m51s550ms873µs800ns).
+2024-08-24 08:52:55 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 7.034 seconds (process running for 8.902)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-24 08:52:56 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-24 08:52:56 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-24 08:52:56 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-24 08:52:56 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
