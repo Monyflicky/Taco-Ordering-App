@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Running Qodana within the Docker container
-                    sh 'qodana'
+                    bat 'qodana'
                 }
             }
         }
