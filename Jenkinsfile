@@ -2,18 +2,22 @@ pipeline {
     environment {
         QODANA_TOKEN = credentials('qodana-token')
     }
-    agent {
-        docker {
-            image 'jetbrains/qodana-jvm'
-            args '-v /data/project:/data/project'
-        }
-    }
+    agent any
     stages {
         stage('Qodana') {
             steps {
                 script {
-                    // Running Qodana within the Docker container
-                    bat 'qodana'
+                    // Adjust the paths to use Windows-style absolute paths
+                    def workspacePath = bat(script: 'cd /d %WORKSPACE%', returnStdout: true).trim()
+                    def qodanaResultsPath = "${workspacePath}/qodana-results"
+
+                    sh """
+                    docker run --rm \
+                      -v "${workspacePath}:/data/project" \
+                      -v "${qodanaResultsPath}:/data/results" \
+                      -e QODANA_TOKEN="${QODANA_TOKEN}" \
+                      jetbrains/qodana-jvm qodana
+                    """
                 }
             }
         }
