@@ -17,7 +17,7 @@ pipeline {
                     def workspacePath = "${env.WORKSPACE}"
                     def qodanaResultsPath = "${env.WORKSPACE}/qodana-results"
 
-                    sh """
+                    bat """
                     docker run --rm \
                         -v "${workspacePath}:/data/project" \
                         -v "${qodanaResultsPath}:/data/results" \
