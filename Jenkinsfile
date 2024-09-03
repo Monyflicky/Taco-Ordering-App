@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        QODANA_TOKEN = credentials('QODANA_TOKEN')
+        QODANA_TOKEN = credentials('qodana_token')
         WORKSPACE_PATH = "${env.WORKSPACE}"
         QODANA_RESULTS_PATH = "${env.WORKSPACE}\\qodana-results"
     }
@@ -18,7 +18,7 @@ pipeline {
                 docker run --rm ^
                     -v "%WORKSPACE_PATH%:/data/project" ^
                     -v "%QODANA_RESULTS_PATH%:/data/results" ^
-                    -e QODANA_TOKEN="%QODANA_TOKEN%" ^
+                    -e QODANA_TOKEN="%qodana_token%" ^
                     jetbrains/qodana-jvm qodana
                 """
             }
