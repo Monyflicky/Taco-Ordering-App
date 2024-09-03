@@ -1,14 +1,11 @@
 package tacos.web;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -22,20 +19,13 @@ import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.intercept.AuthorizationFilter;
-import org.springframework.security.web.csrf.*;
-import org.springframework.util.StringUtils;
-import org.springframework.web.server.WebFilter;
 import reactor.core.publisher.Mono;
-import tacos.data.UserRepository;
+import tacos.data.api.UserRepository;
 
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.function.Supplier;
-
-import static org.springframework.boot.autoconfigure.security.servlet.PathRequest.toH2Console;
-import static org.springframework.security.config.Customizer.withDefaults;
 //import tacos.model.User;
 
 @Configuration

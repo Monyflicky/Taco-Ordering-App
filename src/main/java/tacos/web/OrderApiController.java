@@ -3,8 +3,8 @@ package tacos.web;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
-import tacos.data.OrderMessagingService;
-import tacos.data.OrderRepository;
+import tacos.data.api.OrderMessagingService;
+import tacos.data.api.OrderRepository;
 import tacos.model.TacoOrder;
 
 @RestController

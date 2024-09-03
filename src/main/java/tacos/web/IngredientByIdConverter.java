@@ -3,7 +3,7 @@ package tacos.web;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-import tacos.data.IngredientRepository;
+import tacos.data.api.IngredientRepository;
 import tacos.model.Ingredient;
 
 @Component

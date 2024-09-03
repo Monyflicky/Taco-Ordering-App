@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 import reactor.test.StepVerifier;
-import tacos.data.IngredientRepository;
+import tacos.data.api.IngredientRepository;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

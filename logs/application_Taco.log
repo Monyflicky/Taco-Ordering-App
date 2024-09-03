@@ -138,3 +138,231 @@ spring.integration.endpoints.defaultTimeout=30000
 2024-08-24 08:52:56 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
 2024-08-24 08:52:56 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
 2024-08-24 08:52:56 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-26 22:27:55 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-26 22:27:56 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-26 22:27:56 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-26 22:27:56 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-26 22:27:56 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 26952 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-26 22:27:56 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-26 22:27:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-26 22:27:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 225 ms. Found 4 R2DBC repository interfaces.
+2024-08-26 22:27:58 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-26 22:27:58 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-26 22:27:58 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-26 22:28:02 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41463c56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@161c9468, org.springframework.security.web.context.SecurityContextHolderFilter@f287a4e, org.springframework.security.web.header.HeaderWriterFilter@497fd334, org.springframework.web.filter.CorsFilter@629de8, org.springframework.security.web.authentication.logout.LogoutFilter@73baf7f0, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2ffcdc9b, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5020e5ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71d2261e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53917c92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b32b678, org.springframework.security.web.access.ExceptionTranslationFilter@5e198c40, tacos.web.ProhibitFilter@1b6683c4, tacos.web.RobotAuthenticationFilter@69abeb14, org.springframework.security.web.access.intercept.AuthorizationFilter@2e2cd42c]
+2024-08-26 22:28:03 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-26 22:28:03 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-26 22:28:03 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-26 22:28:03 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-26 22:28:03 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
+
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
+
+2024-08-26 22:28:03 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 6.752 seconds (process running for 8.501)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-26 22:28:04 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-26 22:28:04 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-26 22:28:04 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-26 22:28:04 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-26 22:45:01 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-26 22:45:01 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-26 22:45:01 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-26 22:45:01 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-26 22:45:01 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 6724 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-26 22:45:01 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-26 22:45:03 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-26 22:45:03 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 185 ms. Found 4 R2DBC repository interfaces.
+2024-08-26 22:45:03 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-26 22:45:03 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-26 22:45:03 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-26 22:45:06 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@55a66bbf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f02b2d4, org.springframework.security.web.context.SecurityContextHolderFilter@3ae87e38, org.springframework.security.web.header.HeaderWriterFilter@66130c3b, org.springframework.web.filter.CorsFilter@780dbed7, org.springframework.security.web.authentication.logout.LogoutFilter@52bc6fcf, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@51fa09c7, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1c66cd02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50930bff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@296bfddb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31859960, org.springframework.security.web.access.ExceptionTranslationFilter@3cc817bd, tacos.web.ProhibitFilter@5718e77c, tacos.web.RobotAuthenticationFilter@3d667b59, org.springframework.security.web.access.intercept.AuthorizationFilter@2c846d55]
+2024-08-26 22:45:07 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-26 22:45:07 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-26 22:45:07 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-26 22:45:07 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-26 22:45:07 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
+
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
+
+2024-08-26 22:45:07 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 6.478 seconds (process running for 8.408)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-26 22:45:08 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-26 22:45:09 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-26 22:45:09 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-26 22:45:09 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-26 22:45:09 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-27 07:18:20 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-27 07:18:21 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-27 07:18:21 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-27 07:18:21 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 07:18:21 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 26508 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-27 07:18:21 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 07:18:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-27 07:18:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 280 ms. Found 4 R2DBC repository interfaces.
+2024-08-27 07:18:24 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-27 07:18:24 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-27 07:18:24 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-27 07:18:27 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@55a66bbf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f02b2d4, org.springframework.security.web.context.SecurityContextHolderFilter@3ae87e38, org.springframework.security.web.header.HeaderWriterFilter@66130c3b, org.springframework.web.filter.CorsFilter@780dbed7, org.springframework.security.web.authentication.logout.LogoutFilter@52bc6fcf, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@51fa09c7, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1c66cd02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50930bff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@296bfddb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31859960, org.springframework.security.web.access.ExceptionTranslationFilter@3cc817bd, tacos.web.ProhibitFilter@5718e77c, tacos.web.RobotAuthenticationFilter@3d667b59, org.springframework.security.web.access.intercept.AuthorizationFilter@2c846d55]
+2024-08-27 07:18:28 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-27 07:18:28 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-27 07:18:28 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-27 07:18:28 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-27 07:18:28 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
+
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
+
+2024-08-27 07:18:28 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 7.506 seconds (process running for 9.578)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-27 07:18:30 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-27 07:18:30 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-27 07:18:30 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-27 07:18:30 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-27 08:17:26 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-27 08:17:27 INFO  tacos.TacoCloudApplication - Starting TacoCloudApplication using Java 21.0.2 with PID 28632 (C:\Users\Owner\Documents\taco-cloud\target\classes started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-27 08:17:27 INFO  tacos.TacoCloudApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 08:17:27 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-27 08:17:27 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-27 08:17:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-27 08:17:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 194 ms. Found 4 R2DBC repository interfaces.
+2024-08-27 08:17:28 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-27 08:17:28 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-27 08:17:28 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - The '#jsonPath' SpEL function cannot be registered: there is no jayway json-path.jar on the classpath.
+2024-08-27 08:17:28 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-27 08:17:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-27 08:17:29 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-27 08:17:29 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-27 08:17:29 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-08-27 08:17:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-27 08:17:29 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2473 ms
+2024-08-27 08:17:30 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-27 08:17:31 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c06c9ff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60a2ca94, org.springframework.security.web.context.SecurityContextHolderFilter@4fda33d7, org.springframework.security.web.header.HeaderWriterFilter@41e90688, org.springframework.web.filter.CorsFilter@e1e6620, org.springframework.security.web.authentication.logout.LogoutFilter@6132e83d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@12072664, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@46df58eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d4710a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@471aab7c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bf422fe, org.springframework.security.web.access.ExceptionTranslationFilter@4a7f6705, tacos.web.ProhibitFilter@1157454e, tacos.web.RobotAuthenticationFilter@67d7db9a, org.springframework.security.web.access.intercept.AuthorizationFilter@3e3a7bc2]
+2024-08-27 08:17:32 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-27 08:17:32 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-27 08:17:32 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-27 08:17:32 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-27 08:17:32 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-27 08:17:32 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-08-27 08:17:32 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
+
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
+
+2024-08-27 08:17:32 INFO  tacos.TacoCloudApplication - Started TacoCloudApplication in 5.747 seconds (process running for 6.587)
+2024-08-30 12:19:04 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tacos.TacoCloudApplicationTests]: TacoCloudApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-30 12:19:05 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tacos.TacoCloudApplication for test class tacos.TacoCloudApplicationTests
+2024-08-30 12:19:05 INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2024-08-30 12:19:05 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-08-30 12:19:05 INFO  tacos.TacoCloudApplicationTests - Starting TacoCloudApplicationTests using Java 21.0.2 with PID 8652 (started by Owner in C:\Users\Owner\Documents\taco-cloud)
+2024-08-30 12:19:05 INFO  tacos.TacoCloudApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 12:19:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-08-30 12:19:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 240 ms. Found 4 R2DBC repository interfaces.
+2024-08-30 12:19:08 DEBUG o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+2024-08-30 12:19:08 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-30 12:19:08 INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-30 12:19:11 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21f479cd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@102fd71d, org.springframework.security.web.context.SecurityContextHolderFilter@1abbc1d4, org.springframework.security.web.header.HeaderWriterFilter@364c93e6, org.springframework.web.filter.CorsFilter@8e00c02, org.springframework.security.web.authentication.logout.LogoutFilter@1e5e3147, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@68543a35, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4cefa0be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ad26381, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b20aa21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@464d60fb, org.springframework.security.web.access.ExceptionTranslationFilter@f83d121, tacos.web.ProhibitFilter@447543ee, tacos.web.RobotAuthenticationFilter@2a0ce342, org.springframework.security.web.access.intercept.AuthorizationFilter@3945886e]
+2024-08-30 12:19:13 DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+2024-08-30 12:19:13 INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-30 12:19:13 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 1 subscriber(s).
+2024-08-30 12:19:13 INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-30 12:19:13 DEBUG o.s.i.c.IntegrationConfigurationReport - 
+Spring Integration global properties:
+
+spring.integration.channels.autoCreate=true
+spring.integration.channels.error.requireSubscribers=true
+spring.integration.taskScheduler.poolSize=10
+spring.integration.readOnly.headers=
+spring.integration.channels.maxUnicastSubscribers=2147483647
+spring.integration.endpoints.noAutoStartup=
+spring.integration.channels.error.ignoreFailures=true
+spring.integration.messagingTemplate.throwExceptionOnLateReply=false
+spring.integration.channels.maxBroadcastSubscribers=2147483647
+spring.integration.endpoints.defaultTimeout=30000
+
+2024-08-30 12:19:13 INFO  tacos.TacoCloudApplicationTests - Started TacoCloudApplicationTests in 7.661 seconds (process running for 9.73)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.1 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.1 - request(32)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.2 - onSubscribe(FluxSubscribeOn.SubscribeOnSubscriber)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.2 - request(32)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.2 - onNext(KIWI)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.1 - onNext(APPLE)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.2 - onNext(STRAWBERRY)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.1 - onNext(ORANGE)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.1 - onNext(BANANA)
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.2 - onComplete()
+2024-08-30 12:19:14 INFO  reactor.Flux.SubscribeOn.1 - onComplete()
+2024-08-30 12:19:14 INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-30 12:19:14 INFO  o.s.i.c.PublishSubscribeChannel - Channel 'taco-cloud.errorChannel' has 0 subscriber(s).
+2024-08-30 12:19:14 INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-08-30 12:21:53 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-08-30 13:38:08 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-08-31 21:05:32 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-08-31 21:09:07 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-08-31 21:34:40 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-08-31 21:36:44 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-08-31 21:37:11 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2
+2024-09-02 21:15:01 INFO  c.tngtech.archunit.core.PluginLoader - Detected Java version 21.0.2

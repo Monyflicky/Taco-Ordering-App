@@ -1,16 +1,8 @@
 package tacos;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.transaction.annotation.Transactional;
-import tacos.data.IngredientRepository;
-import tacos.model.Ingredient;
-import tacos.model.Ingredient.Type;
-
-import java.util.UUID;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "tacos.data")

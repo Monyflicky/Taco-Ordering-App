@@ -3,9 +3,8 @@ package tacos.service.jms;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-import tacos.data.OrderReceiver;
+import tacos.data.api.OrderReceiver;
 import tacos.model.TacoOrder;
 
 

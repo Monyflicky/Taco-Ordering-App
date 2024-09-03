@@ -1,4 +1,4 @@
-package tacos.data;
+package tacos.data.api;
 
 import org.springframework.stereotype.Repository;
 import tacos.model.TacoOrder;

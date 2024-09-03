@@ -2,12 +2,11 @@ package tacos.service.jms;
 
 import jakarta.jms.JMSException;
 import jakarta.jms.Message;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessagePostProcessor;
 import org.springframework.stereotype.Service;
-import tacos.data.OrderMessagingService;
+import tacos.data.api.OrderMessagingService;
 import tacos.model.TacoOrder;
 
 
@@ -16,7 +15,6 @@ public class JmsOrderMessagingService implements OrderMessagingService
 {
     private final JmsTemplate jms;
 
-   @Autowired
    JmsOrderMessagingService(@Lazy JmsTemplate jms){
        this.jms = jms;
    }

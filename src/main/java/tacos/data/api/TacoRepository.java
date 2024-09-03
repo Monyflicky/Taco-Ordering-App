@@ -1,4 +1,4 @@
-package tacos.data;
+package tacos.data.api;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;

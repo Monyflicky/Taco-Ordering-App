@@ -1,8 +1,5 @@
 package tacos.web;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
-import org.apache.activemq.artemis.api.core.management.Attribute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,7 +16,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import jakarta.validation.Valid;
 import org.springframework.web.client.RestTemplate;
 import reactor.core.publisher.Flux;
-import tacos.data.IngredientRepository;
+import tacos.data.api.IngredientRepository;
+import tacos.data.internal.IngredientOtherRepository;
 import tacos.model.Ingredient;
 import tacos.model.Taco;
 import tacos.model.TacoOrder;

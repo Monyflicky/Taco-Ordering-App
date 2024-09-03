@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import tacos.data.IngredientRepository;
+import tacos.data.api.IngredientRepository;
 import tacos.model.Ingredient;
 
 @Controller
@@ -38,7 +38,7 @@ public class IngredientController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     @PreAuthorize("#{hasRole('Admin')}")
-    public void deleteIngredient(@PathVariable("id") String id){
+    public void deleteIngredient(@PathVariable String id){
         repo.deleteById(id);
     }
 }

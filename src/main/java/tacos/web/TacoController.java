@@ -3,32 +3,23 @@ package tacos.web;
 //import org.hibernate.query.QueryParameter;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import tacos.data.IngredientRepository;
-import tacos.data.TacoRepository;
-import tacos.data.UserRepository;
+import tacos.data.api.IngredientRepository;
+import tacos.data.api.TacoRepository;
+import tacos.data.api.UserRepository;
 import tacos.model.Ingredient;
 import tacos.model.Taco;
-import tacos.model.TacoOrder;
 
 import java.net.URI;
 import java.util.Arrays;
-import java.util.Optional;
 
-import static javax.management.Query.and;
 import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
-import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @RestController
 @RequestMapping(path="/api/tacos", produces="application/json")
@@ -55,7 +46,7 @@ public class TacoController {
 
     }
     @GetMapping("/{id}")
-    public Mono<Taco> findTacoById(@PathVariable("id") long id){
+    public Mono<Taco> findTacoById(@PathVariable long id){
         return tacoRep.findById(id);
         //return tac.map(taco -> new ResponseEntity<>(taco, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
     }

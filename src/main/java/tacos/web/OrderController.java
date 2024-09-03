@@ -10,12 +10,10 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import jakarta.validation.Valid;
 import reactor.core.publisher.Mono;
-import tacos.data.OrderRepository;
-import tacos.data.UserRepository;
+import tacos.data.api.OrderRepository;
+import tacos.data.api.UserRepository;
 import tacos.model.TacoOrder;
 import tacos.model.User;
-
-import java.security.Principal;
 
 //@Slf4j
 @Controller
@@ -53,14 +51,14 @@ public class OrderController {
 	}
 	@PutMapping(path="/{orderId}", consumes="application/json")
 	public Mono<TacoOrder> putOrder(
-			@PathVariable("orderId") Long orderId,
+			@PathVariable Long orderId,
 			@RequestBody TacoOrder order) {
 		order.setId(orderId);
 		return orderRepo.save(order);
 	}
 
 	@PatchMapping(path="/{orderId}", consumes="application/json")
-	public Mono<TacoOrder> patchOrder(@PathVariable("orderId") Long orderId,
+	public Mono<TacoOrder> patchOrder(@PathVariable Long orderId,
 								@RequestBody TacoOrder patch) {
 		return orderRepo.findById(orderId)
 				.flatMap(order -> {

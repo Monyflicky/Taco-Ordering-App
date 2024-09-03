@@ -5,11 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tacos.data.UserRepository;
+import tacos.data.api.UserRepository;
 import tacos.model.RegistrationForm;
-
-import java.security.Principal;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/register")

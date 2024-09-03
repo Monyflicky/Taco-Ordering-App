@@ -24,7 +24,7 @@ spring:
 
 
 logging:
-  file:
+  file.name:
     path: /var/logs/
     file: TacoCloud.log
   level:
