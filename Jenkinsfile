@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        QODANA_TOKEN = credentials('qodana_token')
+        QODANA_TOKEN = credentials('qodana-token')
         WORKSPACE_PATH = "${env.WORKSPACE}"
         QODANA_RESULTS_PATH = "${env.WORKSPACE}\\qodana-results"
     }
