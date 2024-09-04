@@ -18,7 +18,7 @@ pipeline {
                 docker run --rm ^
                     -v "%WORKSPACE_PATH%:/data/project" ^
                     -v "%QODANA_RESULTS_PATH%:/data/results" ^
-                    -e QODANA_TOKEN="%qodana-token%" ^
+                    -e QODANA_TOKEN=%QODANA_TOKEN% ^
                     jetbrains/qodana-jvm qodana
                 """
             }
